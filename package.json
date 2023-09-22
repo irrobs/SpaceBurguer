@@ -1,0 +1,26 @@
+{
+  "name": "spaceburguer",
+  "version": "1.0.0",
+  "description": "Landing page for a Space themed burguer joint",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss css/style.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass  sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "sass --style=compressed css/style.prefix.css css/style.css ",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "author": "Matheus Borri",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.67.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.30",
+    "postcss-cli": "^10.1.0"
+  }
+}

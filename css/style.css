@@ -1,0 +1,149 @@
+@keyframes floatingBtn {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 1rem 2rem rgba(0, 128, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 128, 0, 0.2);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 1rem 2rem rgba(0, 128, 0, 0.4);
+  }
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+}
+
+.heading__primary {
+  font-size: 9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.navigation {
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  font-size: 2rem;
+  background-color: black;
+}
+.navigation__list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.navigation__item {
+  position: relative;
+  overflow: hidden;
+}
+.navigation__item > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+  color: white;
+}
+.navigation__item:hover .navigation__link--visible {
+  transform: translateY(-100%);
+}
+.navigation__item:hover .navigation__link--invisible {
+  top: 0;
+}
+.navigation__link--visible {
+  top: -100%;
+}
+.navigation__link--invisible {
+  position: absolute;
+  text-decoration: none;
+  top: 100%;
+  left: 0;
+}
+
+.logo {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo__img {
+  width: 4.4rem;
+  height: 4.4rem;
+  color: white;
+}
+.logo__text {
+  font-size: 2.4rem;
+  color: white;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 92vh;
+  margin-top: 8vh;
+  background-image: url(/imgs/space-1.jpg);
+  background-size: cover;
+  color: #fff;
+  align-items: center;
+  justify-items: center;
+}
+.hero__text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 16rem;
+  line-height: 1;
+}
+.hero__text {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.hero__btn {
+  color: #fff;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  align-self: flex-start;
+  margin-top: 4rem;
+  padding: 2rem 4rem;
+  background-color: grey;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.hero__btn:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1.5rem 3rem rgba(0, 128, 0, 0.2);
+}
+.hero__btn:hover:active {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 1.5rem 4rem rgba(0, 128, 0, 0.1);
+}
+.hero__img {
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

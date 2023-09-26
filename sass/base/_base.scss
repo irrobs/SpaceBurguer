@@ -1,5 +1,5 @@
-@use "../abstracts/mixins" as m;
-@use "../abstracts/variables" as i;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 // reset and setting page font-size to 10px
 *,
@@ -15,6 +15,19 @@ html {
 }
 
 body {
+  background-color: black;
   box-sizing: border-box;
   position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    [hero-start nav-start]8rem
+    [sections-start] 1fr
+    [sections-end] 8rem
+    [hero-end nav-end];
+
+  grid-template-rows: 8vh 92vh 80rem;
+
+  /* grid-template-columns: repeat(8, 1fr); */
 }

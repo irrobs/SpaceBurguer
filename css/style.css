@@ -1,15 +1,12 @@
-@keyframes floatingBtn {
+@keyframes floating {
   0% {
-    transform: translateY(0);
-    box-shadow: 0 1rem 2rem rgba(0, 128, 0, 0.4);
+    transform: translateY(0) rotate(0);
   }
   50% {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 128, 0, 0.2);
+    transform: translateY(-12rem) rotate(20deg);
   }
   100% {
-    transform: translateY(0);
-    box-shadow: 0 1rem 2rem rgba(0, 128, 0, 0.4);
+    transform: translateY(0) rotate(0);
   }
 }
 *,
@@ -25,8 +22,13 @@ html {
 }
 
 body {
+  background-color: black;
   box-sizing: border-box;
   position: relative;
+  display: grid;
+  grid-template-columns: [hero-start nav-start] 8rem [sections-start] 1fr [sections-end] 8rem [hero-end nav-end];
+  grid-template-rows: 8vh 92vh 80rem;
+  /* grid-template-columns: repeat(8, 1fr); */
 }
 
 body {
@@ -41,10 +43,7 @@ body {
 }
 
 .navigation {
-  height: 8vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
+  grid-column: nav-start/nav-end;
   display: flex;
   align-items: center;
   padding: 0 4rem;
@@ -100,10 +99,9 @@ body {
 }
 
 .hero {
+  grid-column: hero-start/hero-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 92vh;
-  margin-top: 8vh;
   background-image: url(/imgs/space-1.jpg);
   background-size: cover;
   color: #fff;
@@ -128,22 +126,61 @@ body {
   align-self: flex-start;
   margin-top: 4rem;
   padding: 2rem 4rem;
-  background-color: grey;
+  background-color: #16a34a;
   border: none;
   border-radius: 100px;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .hero__btn:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1.5rem 3rem rgba(0, 128, 0, 0.2);
+  box-shadow: 0 1.5rem 3rem rgba(74, 222, 128, 0.2);
 }
 .hero__btn:hover:active {
   transform: translateY(-0.25rem);
-  box-shadow: 0 1.5rem 4rem rgba(0, 128, 0, 0.1);
+  box-shadow: 0 1.5rem 4rem rgba(74, 222, 128, 0.1);
 }
 .hero__img {
+  height: 80%;
+  animation: floating 10s 0s ease infinite;
+}
+
+.about {
+  background-color: white;
+  padding: 6rem 10rem;
+  grid-column: sections-start/sections-end;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  justify-items: center;
+}
+.about__gallery {
+  position: relative;
   height: 100%;
+  width: 100%;
+}
+.about__gallery > img {
+  position: absolute;
+  border: 3px solid white;
+  border-radius: 15px;
+}
+.about__gallery--1 {
+  top: 0;
+  width: 40%;
+  top: 40%;
+  left: 25%;
+  z-index: 300;
+}
+.about__gallery--2 {
+  height: 60%;
+  top: 0;
+  left: 10%;
+  z-index: 100;
+}
+.about__gallery--3 {
+  width: 40%;
+  bottom: 5%;
+  z-index: 200;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,17 +1,13 @@
-@keyframes floatingBtn {
+@keyframes floating {
   0% {
-    transform: translateY(0);
-
-    box-shadow: 0 1rem 2rem rgba(green, 0.4);
+    transform: translateY(0) rotate(0);
   }
 
   50% {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 0.5rem 1rem rgba(green, 0.2);
+    transform: translateY(-12rem) rotate(20deg);
   }
 
   100% {
-    transform: translateY(0);
-    box-shadow: 0 1rem 2rem rgba(green, 0.4);
+    transform: translateY(0) rotate(0);
   }
 }

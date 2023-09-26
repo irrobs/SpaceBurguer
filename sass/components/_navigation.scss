@@ -1,9 +1,5 @@
 .navigation {
-  height: 8vh;
-  width: 100%;
-
-  position: fixed;
-  top: 0;
+  grid-column: nav-start / nav-end;
 
   display: flex;
   align-items: center;

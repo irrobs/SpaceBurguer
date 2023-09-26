@@ -1,0 +1,50 @@
+@use "../abstracts/animations" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.about {
+  background-color: white;
+  padding: 6rem 10rem;
+  grid-column: sections-start / sections-end;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  justify-items: center;
+
+  &__gallery {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    & > img {
+      position: absolute;
+      border: 3px solid white;
+      border-radius: 15px;
+    }
+
+    &--1 {
+      top: 0;
+      width: 40%;
+
+      top: 40%;
+      left: 25%;
+
+      z-index: 300;
+    }
+    &--2 {
+      height: 60%;
+
+      top: 0;
+      left: 10%;
+      z-index: 100;
+    }
+    &--3 {
+      width: 40%;
+
+      bottom: 5%;
+      z-index: 200;
+    }
+  }
+
+  &__text {
+  }
+}

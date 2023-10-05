@@ -3,13 +3,21 @@
 @use "../abstracts/variables" as *;
 
 .about {
-  background-color: white;
   padding: 6rem 10rem;
-  grid-column: sections-start / sections-end;
+
+  grid-column: hero-start / hero-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
+
+  background: linear-gradient(
+      to bottom,
+      rgba(18, 18, 18, 0.95),
+      transparent 50%
+    ),
+    url(/imgs/space-2.jpg);
+  background-size: cover;
 
   &__alien {
     position: absolute;
@@ -27,7 +35,7 @@
 
     & > img[class*="about__gallery"] {
       position: absolute;
-      border: 3px solid white;
+      border: 3px solid $color-primary-light;
       border-radius: 15px;
     }
 
@@ -60,6 +68,7 @@
       &:hover {
         transform: scale(1.1);
         z-index: 1000;
+        box-shadow: 0 0 4rem rgba($color-primary-light, 0.4);
       }
 
       &:hover ~ .about__alien {
@@ -73,13 +82,14 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     padding: 0 3rem;
+    position: relative;
   }
 
   &__text-paragraph {
-    color: #343a40;
+    color: #f9fafb;
     font-size: 2rem;
     font-weight: 500;
   }

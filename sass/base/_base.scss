@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #070707;
   box-sizing: border-box;
   position: relative;
 
@@ -27,7 +27,7 @@ body {
     [sections-end] 8rem
     [hero-end nav-end];
 
-  grid-template-rows: 8vh 92vh 80rem;
+  grid-template-rows: 8vh 92vh 100vh;
 
   /* grid-template-columns: repeat(8, 1fr); */
 }

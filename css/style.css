@@ -22,12 +22,12 @@ html {
 }
 
 body {
-  background-color: black;
+  background-color: #070707;
   box-sizing: border-box;
   position: relative;
   display: grid;
   grid-template-columns: [hero-start nav-start] 8rem [sections-start] 1fr [sections-end] 8rem [hero-end nav-end];
-  grid-template-rows: 8vh 92vh 80rem;
+  grid-template-rows: 8vh 92vh 100vh;
   /* grid-template-columns: repeat(8, 1fr); */
 }
 
@@ -47,6 +47,7 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: -1px;
+  /* text-shadow: -3px 3px 5px white; */
 }
 
 .navigation {
@@ -109,7 +110,7 @@ body {
   grid-column: hero-start/hero-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-image: url(/imgs/space-1.jpg);
+  background-image: linear-gradient(to bottom, transparent, rgba(18, 18, 18, 0.95) 90%), url(/imgs/space-2.jpg);
   background-size: cover;
   color: #fff;
   align-items: center;
@@ -153,13 +154,14 @@ body {
 }
 
 .about {
-  background-color: white;
   padding: 6rem 10rem;
-  grid-column: sections-start/sections-end;
+  grid-column: hero-start/hero-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
+  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.95), transparent 50%), url(/imgs/space-2.jpg);
+  background-size: cover;
 }
 .about__alien {
   position: absolute;
@@ -175,7 +177,7 @@ body {
 }
 .about__gallery > img[class*=about__gallery] {
   position: absolute;
-  border: 3px solid white;
+  border: 3px solid #4ade80;
   border-radius: 15px;
 }
 .about__gallery-img {
@@ -203,6 +205,7 @@ body {
 .about__gallery-img:hover {
   transform: scale(1.1);
   z-index: 1000;
+  box-shadow: 0 0 4rem rgba(74, 222, 128, 0.4);
 }
 .about__gallery-img:hover ~ .about__alien {
   transform: rotate(35deg) translate(15rem, -6rem);
@@ -212,11 +215,12 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 0 3rem;
+  position: relative;
 }
 .about__text-paragraph {
-  color: #343a40;
+  color: #f9fafb;
   font-size: 2rem;
   font-weight: 500;
 }

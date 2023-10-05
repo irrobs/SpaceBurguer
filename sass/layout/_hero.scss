@@ -6,7 +6,12 @@
   grid-column: hero-start / hero-end;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-image: url(/imgs/space-1.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(18, 18, 18, 0.95) 90%
+    ),
+    url(/imgs/space-2.jpg);
   background-size: cover;
   color: #fff;
   align-items: center;

@@ -10,11 +10,12 @@
 
   @include gridCenter;
 
-  background: linear-gradient(
+  background-image: linear-gradient(
       to bottom,
-      $section-separation-shadow,
-      transparent 50%
+      transparent 80%,
+      $section-separation-shadow
     ),
+    linear-gradient(to bottom, $section-separation-shadow, transparent 30%),
     url(/imgs/space-2.jpg);
   background-size: cover;
 
@@ -86,7 +87,7 @@
     position: relative;
   }
 
-  &__text-box .heading__secondary {
+  &__heading {
     color: $color-primary;
   }
 

@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #070707;
+  background-color: $color-gray-dark;
   box-sizing: border-box;
   position: relative;
 
@@ -27,6 +27,5 @@ body {
     [sections-end] 8rem
     [hero-end nav-end];
 
-  grid-template-rows: 8vh 92vh 100vh;
-
+  grid-template-rows: 8vh 92vh 100vh min-content;
 }

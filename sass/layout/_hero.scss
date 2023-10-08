@@ -8,8 +8,8 @@
   grid-template-columns: 1fr 1fr;
   background-image: linear-gradient(
       to bottom,
-      transparent,
-      $section-separation-shadow 90%
+      transparent 80%,
+      $section-separation-shadow
     ),
     url(/imgs/space-2.jpg);
   background-size: cover;

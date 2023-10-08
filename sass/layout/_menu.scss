@@ -1,0 +1,32 @@
+@use "../abstracts/animations" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.menu {
+  grid-column: hero-start/hero-end;
+  grid-template-columns: repeat(3, 1fr);
+
+  background-image: linear-gradient(
+      to bottom,
+      transparent 80%,
+      $section-separation-shadow
+    ),
+    linear-gradient(to bottom, $section-separation-shadow, transparent 30%),
+    url(/imgs/space-2.jpg);
+  background-size: cover;
+
+  @include gridCenter;
+
+  padding: 6rem 0 10rem;
+  position: relative;
+  &__heading {
+    grid-column: 1 / -1;
+    color: $color-primary;
+  }
+
+  &__ufo {
+    position: absolute;
+    top: -5%;
+    height: 50%;
+  }
+}

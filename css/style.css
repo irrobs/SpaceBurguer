@@ -28,11 +28,12 @@ body {
   display: grid;
   grid-template-columns: [hero-start nav-start] 8rem [sections-start] 1fr [sections-end] 8rem [hero-end nav-end];
   grid-template-rows: 8vh 92vh 100vh;
-  /* grid-template-columns: repeat(8, 1fr); */
 }
 
 body {
   font-family: "Orbitron", sans-serif;
+  color: #f9fafb;
+  font-weight: 500;
 }
 
 .heading__primary {
@@ -47,7 +48,6 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: -1px;
-  /* text-shadow: -3px 3px 5px white; */
 }
 
 .navigation {
@@ -56,7 +56,7 @@ body {
   align-items: center;
   padding: 0 4rem;
   font-size: 2rem;
-  background-color: black;
+  background-color: #0f0f0f;
 }
 .navigation__list {
   list-style: none;
@@ -72,7 +72,6 @@ body {
   height: 100%;
   width: 100%;
   transition: all 0.3s;
-  color: white;
 }
 .navigation__item:hover .navigation__link--visible {
   transform: translateY(-100%);
@@ -99,22 +98,19 @@ body {
 .logo__img {
   width: 4.4rem;
   height: 4.4rem;
-  color: white;
 }
 .logo__text {
   font-size: 2.4rem;
-  color: white;
 }
 
 .hero {
-  grid-column: hero-start/hero-end;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-image: linear-gradient(to bottom, transparent, rgba(18, 18, 18, 0.95) 90%), url(/imgs/space-2.jpg);
-  background-size: cover;
-  color: #fff;
   align-items: center;
   justify-items: center;
+  grid-column: hero-start/hero-end;
+  grid-template-columns: 1fr 1fr;
+  background-image: linear-gradient(to bottom, transparent, rgba(15, 15, 15, 0.95) 90%), url(/imgs/space-2.jpg);
+  background-size: cover;
 }
 .hero__text-box {
   display: flex;
@@ -128,7 +124,7 @@ body {
   letter-spacing: 2px;
 }
 .hero__btn {
-  color: #fff;
+  color: inherit;
   font-size: 2.4rem;
   text-transform: uppercase;
   align-self: flex-start;
@@ -156,11 +152,11 @@ body {
 .about {
   padding: 6rem 10rem;
   grid-column: hero-start/hero-end;
-  display: grid;
   grid-template-columns: 1fr 1fr;
+  display: grid;
   align-items: center;
   justify-items: center;
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.95), transparent 50%), url(/imgs/space-2.jpg);
+  background: linear-gradient(to bottom, rgba(15, 15, 15, 0.95), transparent 50%), url(/imgs/space-2.jpg);
   background-size: cover;
 }
 .about__alien {
@@ -211,7 +207,6 @@ body {
   transform: rotate(35deg) translate(15rem, -6rem);
 }
 .about__text-box {
-  color: #16a34a;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -219,10 +214,11 @@ body {
   padding: 0 3rem;
   position: relative;
 }
+.about__text-box .heading__secondary {
+  color: #16a34a;
+}
 .about__text-paragraph {
-  color: #f9fafb;
   font-size: 2rem;
-  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

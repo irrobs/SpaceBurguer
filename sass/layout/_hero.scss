@@ -3,19 +3,16 @@
 @use "../abstracts/variables" as *;
 
 .hero {
+  @include gridCenter;
   grid-column: hero-start / hero-end;
-  display: grid;
   grid-template-columns: 1fr 1fr;
   background-image: linear-gradient(
       to bottom,
       transparent,
-      rgba(18, 18, 18, 0.95) 90%
+      $section-separation-shadow 90%
     ),
     url(/imgs/space-2.jpg);
   background-size: cover;
-  color: #fff;
-  align-items: center;
-  justify-items: center;
 
   &__text-box {
     display: flex;
@@ -31,7 +28,7 @@
   }
 
   &__btn {
-    color: #fff;
+    color: inherit;
     font-size: 2.4rem;
     text-transform: uppercase;
 

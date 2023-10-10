@@ -1,0 +1,42 @@
+@use "../abstracts/animations" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.overlay {
+  position: absolute;
+  z-index: 1000;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(7, 7, 7, 0.7);
+}
+
+.modal {
+  position: absolute;
+  z-index: 1200;
+
+  background-color: $color-gray-dark;
+  border: 3px solid $color-primary;
+  border-radius: 15px;
+
+  animation: fadeIn 0.5s forwards;
+
+  &__btn-close {
+    background: none;
+    border: none;
+    color: $color-primary;
+
+    width: 4.8rem;
+    height: 4.8rem;
+    margin-left: 95%;
+    margin-top: 2rem;
+
+    cursor: pointer;
+  }
+
+  &__icon-close {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}

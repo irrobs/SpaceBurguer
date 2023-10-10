@@ -23,6 +23,8 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <script type="module" defer src="./style.js"></script>
   </head>
 
   <body>
@@ -128,6 +130,16 @@
           alt="Imagem de hamburguer"
           class="card__img"
         />
+      </div>
+
+      <div class="overlay hidden"></div>
+      <div class="modal hidden">
+        <button class="btn modal__btn-close .modal-active">
+          <ion-icon
+            class="modal__icon-close"
+            name="close-circle-outline"
+          ></ion-icon>
+        </button>
       </div>
     </section>
   </body>

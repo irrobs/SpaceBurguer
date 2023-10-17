@@ -23,9 +23,15 @@
   background-color: black;
 
   transition: all 0.3s;
+  cursor: pointer;
 
   &__img {
     width: 70%;
+    border-radius: 50%;
+
+    &--2 {
+      /* criar animação com element atras que com scale da a impressão de uma "aura" expanddindo */
+    }
   }
 
   .card-2 &__img {

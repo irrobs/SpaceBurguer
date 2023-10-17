@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes floating {
   0% {
     transform: translateY(0) rotate(0);
@@ -21,6 +22,38 @@
     height: 80vh;
   }
 }
+@keyframes tiltRight {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes tiltLeft {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+@keyframes untiltRight {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes untiltLeft {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 *,
 *::after,
 *::before {
@@ -34,6 +67,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #070707;
   box-sizing: border-box;
   position: relative;
@@ -150,9 +184,14 @@ body {
   height: 100%;
   background-color: black;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .card__img {
   width: 70%;
+  border-radius: 50%;
+}
+.card__img--2 {
+  /* criar animação com element atras que com scale da a impressão de uma "aura" expanddindo */
 }
 .card-2 .card__img {
   width: 60%;

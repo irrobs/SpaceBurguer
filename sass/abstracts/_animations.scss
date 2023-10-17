@@ -25,3 +25,42 @@
     height: 80vh;
   }
 }
+
+@keyframes tiltRight {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes tiltLeft {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes untiltRight {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes untiltLeft {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

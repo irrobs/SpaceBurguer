@@ -44,12 +44,20 @@
   }
 
   &__link--invisible {
-    position: absolute;
+    &:link,
+    &:visited {
+      position: absolute;
+      color: white;
 
-    text-decoration: none;
+      text-decoration: none;
 
-    top: 100%;
-    left: 0;
+      top: 100%;
+      left: 0;
+    }
+    &:hover,
+    &:active {
+      color: white;
+    }
   }
 }
 

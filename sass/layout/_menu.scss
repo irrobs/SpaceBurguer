@@ -12,16 +12,16 @@
       $section-separation-shadow
     ),
     linear-gradient(to bottom, $section-separation-shadow, transparent 30%),
-    url(/imgs/space-2.jpg);
+    url(/imgs/space-1-planet.jpg);
   background-size: cover;
-
+  background-position: center;
   @include gridCenter;
 
   padding: 6rem 0 10rem;
   position: relative;
   &__heading {
     grid-column: 1 / -1;
-    color: $color-primary;
+    color: $color-primary-light;
   }
 
   &__ufo {

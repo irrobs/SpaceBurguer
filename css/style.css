@@ -94,6 +94,12 @@ body {
   font-weight: 600;
   letter-spacing: -1px;
 }
+.heading__tertiary {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 
 .mb-small {
   margin-bottom: 2rem;
@@ -114,6 +120,10 @@ body {
 .hidden {
   display: none;
   opacity: 0;
+}
+
+.modal-visible {
+  display: grid;
 }
 
 .navigation {
@@ -148,11 +158,15 @@ body {
 .navigation__link--visible {
   top: -100%;
 }
-.navigation__link--invisible {
+.navigation__link--invisible:link, .navigation__link--invisible:visited {
   position: absolute;
+  color: white;
   text-decoration: none;
   top: 100%;
   left: 0;
+}
+.navigation__link--invisible:hover, .navigation__link--invisible:active {
+  color: white;
 }
 
 .logo {
@@ -172,7 +186,6 @@ body {
 .card {
   font-size: 4rem;
   text-transform: uppercase;
-  border: 3px solid #16a34a;
   border-radius: 15px;
   padding: 2rem 4rem;
   margin-bottom: 3rem;
@@ -182,13 +195,14 @@ body {
   justify-content: space-around;
   width: 70%;
   height: 100%;
-  background-color: black;
   transition: all 0.3s;
   cursor: pointer;
+  /* &__heading {
+    color: $color-primary-light;
+  } */
 }
 .card__img {
   width: 70%;
-  border-radius: 50%;
 }
 .card__img--2 {
   /* criar animação com element atras que com scale da a impressão de uma "aura" expanddindo */
@@ -220,9 +234,13 @@ body {
   background-color: #070707;
   border: 3px solid #16a34a;
   border-radius: 15px;
+  grid-template-columns: 1fr 1fr;
+  /* align-items: center; */
+  justify-items: center;
   animation: fadeIn 0.5s forwards;
 }
 .modal__btn-close {
+  grid-column: 1/-1;
   background: none;
   border: none;
   color: #16a34a;
@@ -231,10 +249,28 @@ body {
   margin-left: 95%;
   margin-top: 2rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.modal__btn-close:hover {
+  color: #4ade80;
 }
 .modal__icon-close {
   width: 4.8rem;
   height: 4.8rem;
+}
+.modal__img {
+  height: 80%;
+}
+.modal__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8rem 6rem;
+  font-size: 2.4rem;
+}
+.modal__heading {
+  color: #4ade80;
 }
 
 .hero {
@@ -358,8 +394,9 @@ body {
 .menu {
   grid-column: hero-start/hero-end;
   grid-template-columns: repeat(3, 1fr);
-  background-image: linear-gradient(to bottom, transparent 80%, rgba(15, 15, 15, 0.95)), linear-gradient(to bottom, rgba(15, 15, 15, 0.95), transparent 30%), url(/imgs/space-2.jpg);
+  background-image: linear-gradient(to bottom, transparent 80%, rgba(15, 15, 15, 0.95)), linear-gradient(to bottom, rgba(15, 15, 15, 0.95), transparent 30%), url(/imgs/space-1-planet.jpg);
   background-size: cover;
+  background-position: center;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -368,7 +405,7 @@ body {
 }
 .menu__heading {
   grid-column: 1/-1;
-  color: #16a34a;
+  color: #4ade80;
 }
 .menu__ufo {
   position: absolute;

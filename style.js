@@ -14,6 +14,7 @@ menu.addEventListener("click", (e) => {
   if (card === null) return;
 
   modal.classList.toggle("hidden");
+  modal.classList.toggle("modal-visible");
   overlay.classList.toggle("hidden");
 });
 
@@ -24,6 +25,7 @@ overlay.addEventListener("click", () => {
 
 btnCloseModal.addEventListener("click", () => {
   overlay.classList.toggle("hidden");
+  modal.classList.toggle("modal-visible");
   modal.classList.toggle("hidden");
 });
 

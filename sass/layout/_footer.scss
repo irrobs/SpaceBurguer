@@ -1,0 +1,55 @@
+@use "../abstracts/animations" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.footer {
+  grid-column: hero-start / hero-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+  padding: 6rem;
+  gap: 8rem;
+
+  &__logo-box {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__link-list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+  }
+
+  &__link-item {
+  }
+
+  &__link {
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: white;
+
+    transition: all 0.3s;
+    &:hover {
+      color: $color-primary-light;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.logo {
+  &__img {
+  }
+
+  &__text {
+  }
+}
+.copyright {
+}

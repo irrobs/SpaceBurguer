@@ -4,6 +4,7 @@
 
 .hero {
   @include gridCenter;
+  margin-top: 8vh;
   grid-column: hero-start / hero-end;
   grid-template-columns: 1fr 1fr;
   background-image: linear-gradient(

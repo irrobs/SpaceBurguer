@@ -15,17 +15,48 @@
     url(/imgs/space-2.jpg);
   background-size: cover;
 
+  @include respond($tab-port) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
   &__text-box {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 0 16rem;
     line-height: 1;
+
+    @include respond($small-desktop) {
+      padding: 0 12rem;
+    }
+
+    @include respond($tab-port) {
+      text-align: center;
+    }
+  }
+
+  &__heading {
+    @include respond($small-desktop) {
+      font-size: 7rem;
+    }
+
+    @include respond($phone-smallest) {
+      font-size: 6rem;
+    }
   }
 
   &__text {
     font-size: 2rem;
     letter-spacing: 2px;
+
+    @include respond($small-desktop) {
+      font-size: 1.6rem;
+    }
+
+    @include respond($tab-port) {
+      font-size: 2rem;
+    }
   }
 
   &__btn {
@@ -47,6 +78,10 @@
 
     transition: all 0.3s;
 
+    @include respond($tab-port) {
+      align-self: center;
+    }
+
     &:hover {
       transform: translateY(-0.5rem);
       box-shadow: 0 1.5rem 3rem rgba($color-primary-light, 0.2);
@@ -59,8 +94,16 @@
   }
 
   &__img {
-    height: 80%;
+    width: 80%;
 
     animation: floating 10s 0s ease infinite;
+
+    @include respond($tab-port) {
+      width: 40%;
+    }
+
+    @include respond($phone-smallest) {
+      width: 60%;
+    }
   }
 }

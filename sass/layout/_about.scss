@@ -10,6 +10,12 @@
 
   @include gridCenter;
 
+  @include respond($tab-port) {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
   background-image: linear-gradient(
       to bottom,
       transparent 80%,
@@ -21,11 +27,20 @@
 
   &__alien {
     position: absolute;
-    height: 50%;
+    width: 75%;
 
-    top: 5%;
-    left: 25%;
+    top: 5rem;
+    left: 25rem;
     transition: all 0.3s;
+
+    @include respond($tab-land) {
+      left: 22rem;
+    }
+
+    @include respond($tab-port) {
+      left: 0;
+      top: 0;
+    }
   }
 
   &__gallery {
@@ -39,30 +54,125 @@
       border-radius: 15px;
     }
 
+    &-surprise {
+      position: relative;
+      width: 35%;
+      height: 50%;
+
+      @include respond($medium-desktop) {
+        width: 38%;
+      }
+
+      @include respond($tab-land) {
+        top: 5rem;
+        right: 5rem;
+      }
+
+      @include respond($tab-port) {
+        width: 25%;
+        top: 30%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: 400;
+      }
+
+      @include respond($phone-smallest) {
+        width: 35%;
+      }
+    }
+
     &-img {
       transition: all 0.3s;
+
       &--1 {
         top: 0;
         width: 50%;
 
-        top: 40%;
-        left: 35%;
+        top: 40rem;
+        left: 35rem;
 
         z-index: 300;
+
+        @include respond($small-desktop) {
+          width: 60%;
+          left: 30rem;
+        }
+
+        @include respond($tab-land) {
+          width: 65%;
+          left: 25rem;
+        }
+
+        @include respond($tab-port) {
+          width: 40%;
+          top: 50%;
+          left: 0;
+          translate: 0 -70%;
+        }
+
+        @include respond($phone-smallest) {
+          width: 55%;
+          left: -5rem;
+        }
       }
+
       &--2 {
-        height: 60%;
+        opacity: 1;
+        position: absolute;
+        border: 3px solid $color-primary-light;
+        border-radius: 15px;
+        width: 100%;
 
         top: 0;
-        left: 20%;
+        left: 20rem;
         z-index: 100;
+
+        @include respond($medium-desktop) {
+          width: 110%;
+        }
+
+        @include respond($smallest-desktop) {
+          width: 120%;
+        }
+
+        @include respond($tab-port) {
+          left: 0;
+          top: 0;
+          z-index: 400;
+        }
       }
       &--3 {
         width: 50%;
 
         bottom: 0;
-        left: 10%;
+        left: 10rem;
         z-index: 200;
+        @include respond($medium-desktop) {
+          width: 60%;
+        }
+
+        @include respond($small-desktop) {
+          width: 65%;
+        }
+
+        @include respond($smallest-desktop) {
+          bottom: 10rem;
+        }
+
+        @include respond($tab-land) {
+          width: 75%;
+        }
+
+        @include respond($tab-port) {
+          width: 45%;
+          top: 50%;
+          left: 60%;
+          translate: 0 -10%;
+        }
+
+        @include respond($phone-smallest) {
+          width: 55%;
+        }
       }
 
       &:hover {
@@ -72,7 +182,11 @@
       }
 
       &:hover ~ .about__alien {
-        transform: rotate(35deg) translate(15rem, -6rem);
+        transform: rotate(40deg) translate(20rem, -10rem);
+
+        @include respond($phone) {
+          transform: rotate(40deg) translate(15rem, -10rem);
+        }
       }
     }
   }
@@ -89,9 +203,17 @@
 
   &__heading {
     color: $color-primary;
+
+    @include respond($phone-smallest) {
+      font-size: 3.6rem;
+    }
   }
 
   &__text-paragraph {
     font-size: 2rem;
+
+    @include respond($phone-smallest) {
+      font-size: 1.6rem;
+    }
   }
 }

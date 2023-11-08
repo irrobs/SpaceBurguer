@@ -11,6 +11,12 @@
   padding: 6rem;
   gap: 8rem;
 
+  @include respond($tab-port) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 6rem 12rem;
+  }
+
   &__logo-box {
     grid-column: 1 / -1;
     display: flex;
@@ -27,6 +33,10 @@
     font-size: 2rem;
 
     border-bottom: 1px solid white;
+
+    @include respond($smallest-desktop) {
+      align-self: center;
+    }
   }
 
   &__link {
@@ -46,4 +56,18 @@
 
 .copyright {
   font-size: 1.6rem;
+
+  @include respond($tab-land) {
+    font-size: 1.2rem;
+  }
+
+  @include respond($tab-port) {
+    font-size: 2rem;
+    padding: 4rem;
+  }
+
+  @include respond($phone-smallest) {
+    font-size: 1.6rem;
+    padding: 2rem 4rem;
+  }
 }

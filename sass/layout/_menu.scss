@@ -17,16 +17,40 @@
   background-position: center;
   @include gridCenter;
 
+  @media only screen and (max-width: $tab-port) {
+    background-image: linear-gradient(
+        to bottom,
+        transparent 80%,
+        $section-separation-shadow
+      ),
+      linear-gradient(to bottom, $section-separation-shadow, transparent 30%),
+      url(/imgs/space-1.jpg);
+  }
+
   padding: 6rem 0 10rem;
   position: relative;
+
+  @include respond($tab-port) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content repeat(3, 1fr);
+  }
   &__heading {
     grid-column: 1 / -1;
     color: $color-primary-light;
+
+    @include respond($tab-port) {
+      margin-top: 10rem;
+      font-size: 8rem;
+    }
   }
 
   &__ufo {
     position: absolute;
-    top: -5%;
-    height: 50%;
+    top: 20%;
+    height: 15%;
+
+    @include respond($tab-port) {
+      display: none;
+    }
   }
 }
